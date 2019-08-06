@@ -26,3 +26,8 @@
     text-align: center;
     margin: 20px auto;
 }
+
+.chat-window {
+    max-height: 40vh;
+    overflow: scroll;
+}
