@@ -19,11 +19,11 @@ newNameForm.addEventListener('submit', e => {
     chatroom.updateName(username);
     newNameForm.reset();
     updtmssg.innerText = `Your name ${username}`;
-    updtmssg.classList.remove('d-none')
-    setTimeout(() => {
-        updtmssg.innerText = '';
-        updtmssg.classList.add('d-none');
-    }, 3000)
+    // updtmssg.classList.remove('d-none')
+    // setTimeout(() => {
+    //     updtmssg.innerText = '';
+    //     updtmssg.classList.add('d-none');
+    // }, 3000)
 });
 
 rooms.addEventListener('click', e => {
@@ -35,9 +35,10 @@ rooms.addEventListener('click', e => {
 })
 
 const username = localStorage.username ? localStorage.username : 'anon';
+updtmssg.innerHTML = username;
 
 // class instance
-const chatUI = new ChatUI(chatlist);
+const chatUI = new ChatUI(chatlist, username);
 const chatroom = new Chatroom('general', username);
 
 // get chat and render

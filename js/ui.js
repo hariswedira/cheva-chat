@@ -1,6 +1,7 @@
 class ChatUI {
-    constructor(list) {
+    constructor(list, username) {
         this.list = list;
+        this.username = username;
     }
     clear() {
         this.list.innerHTML = '';
@@ -11,14 +12,24 @@ class ChatUI {
                 addSuffix: true
             }
         )
-        const html = `
-        <li class="list-group-item">
-            <span class="username">${data.username}</span>
-            <span class="message">${data.message}</span>
-            <div class="time">${when}</div>
-        </li>
-        `;
-
-        this.list.innerHTML += html;
+        if (this.username === data.username) {
+            const html = `
+            <li class="list-group-item" style="text-align: right">
+                <span class="username">${data.username}</span>
+                <span class="message">${data.message}</span>
+                <div class="time">${when}</div>
+            </li>
+            `;
+            this.list.innerHTML += html;
+        } else {
+            const html = `
+            <li class="list-group-item">
+                <span class="username">${data.username}</span>
+                <span class="message">${data.message}</span>
+                <div class="time">${when}</div>
+            </li>
+            `;
+            this.list.innerHTML += html;
+        }
     }
 }
