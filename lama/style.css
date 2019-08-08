@@ -1,0 +1,62 @@
+body {
+    position: relative;
+}
+
+.ntf {
+    position: absolute;
+    top: 10vw;
+    right: 25vw;
+}
+
+.ntf::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 25%;
+    width: 0;
+    height: 0;
+    border: 33px solid transparent;
+    border-top-color: #fff;
+    border-bottom: 0;
+    border-left: 0;
+    margin-left: -10px;
+    margin-bottom: -20px;
+}
+
+.container {
+    max-width: 600px;
+}
+
+.btn {
+    background-color: #F8A400;
+    color: #fff;
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+.white {
+    color: white;
+}
+
+.btn:focus {
+    outline: none !important;
+}
+
+.username {
+    font-weight: bold;
+}
+
+.time {
+    font-size: 0.7em;
+    color: #999;
+}
+
+.update-message {
+    text-align: center;
+    margin: 20px auto;
+}
+
+.chat-window {
+    max-height: 45vh;
+    overflow: unset;
+}

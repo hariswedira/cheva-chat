@@ -21,21 +21,3 @@ body {
         background-position: 0% 50%;
     }
 }
-
-.ntf {
-    width: 200px;
-}
-
-.ntf::before {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    width: 0;
-    height: 0;
-    border: 20px solid transparent;
-    border-top-color: white;
-    border-bottom: 0;
-    margin-left: -20px;
-    margin-bottom: -20px;
-}
